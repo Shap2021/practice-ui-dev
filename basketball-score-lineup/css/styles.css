@@ -1,0 +1,202 @@
+/* Global Page Variables */
+:root {
+    --color-secondary: #9aa5b8;
+    --color-background: #142033;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: #eef1f6
+}
+
+.container {
+    max-width: 900rem;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+h1, h2 {
+    font-family: 'Poppings', sans-serif;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 3.2rem;
+    margin-bottom: 4px;
+    color: #ff8a3d;
+}
+
+.header p {
+    margin: 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-secondary);
+}
+
+@media screen and (min-width: 1024px) {
+    .header h1 {
+        font-size: 4.2rem;
+    }
+
+    .header p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b2b45;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+}
+
+.scoreboard .team {
+    flex: 1;
+    text-align: center;
+}
+
+.scoreboard .team_name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.scoreboard .score {
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: #ff8a3d;
+}
+
+.scoreboard .versus {
+    flex: 0 0 auto;
+    padding: 0 20px;
+    font-size: 2rem;
+    color: #9aa5b8;
+    text-transform: uppercase;
+}
+
+/* Section Header */
+.section_header {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #29405f;
+}
+
+/* Section Designation */
+.section_designation {
+    font-size: 2rem;
+    padding: 0 5px;
+}
+
+/* Player Cards */
+.roster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.player_card {
+    background-color: #1b2b45;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.player_card:hover {
+    transform: translateY(-4px);
+    background-color: #223860;
+}
+
+.player_jersey {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 50%;
+    background-color: #ff8a3d;
+    color: #142033;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.player_name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.player_position {
+    font-size: 1.3rem;
+    color: #9aa5b8;
+    margin-bottom: 12px;
+}
+
+.player_stats {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #29405f;
+    padding-top: 12px;
+}
+
+.player_stats div {
+    font-size: 13px;
+  }
+ 
+.player_stats span {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff8a3d;
+}
+
+/* Button */
+.btn {
+    display: block;
+    width: 200px;
+    margin: 40px auto 0;
+    padding: 12px 0;
+    text-align: center;
+    background-color: #ff8a3d;
+    color: #142033;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ffa564;
+}
+
+@media (max-width: 500px) {
+    .scoreboard {
+      flex-direction: column;
+      gap: 10px;
+    }
+ 
+    .scoreboard .versus {
+      padding: 4px 0;
+    }
+}
